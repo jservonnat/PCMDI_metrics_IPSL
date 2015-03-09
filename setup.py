@@ -28,9 +28,6 @@ cmip5_amip_json         = glob.glob("data/CMIP_metrics_results/CMIP5/amip/*.json
 cmip5_historical_json   = glob.glob("data/CMIP_metrics_results/CMIP5/historical/*.json")
 cmip5_piControl_json    = glob.glob("data/CMIP_metrics_results/CMIP5/piControl/*.json")
 demo_ACME_files         = glob.glob("demo/ACME/*.py")
-demo_CSIRO_files        = glob.glob("demo/CSIRO/*.py")
-demo_CSIRO_files       += glob.glob("demo/CSIRO/*.png")
-demo_CSIRO_files       += glob.glob("demo/CSIRO/*.sh")
 demo_GFDL_files         = glob.glob("demo/GFDL/*.py")
 demo_GFDL_files        += glob.glob("demo/GFDL/*.png")
 demo_NCAR_files         = glob.glob("demo/NCAR/*.py")
@@ -44,13 +41,12 @@ setup (name         = 'pcmdi_metrics',
        packages     = ['pcmdi_metrics','pcmdi_metrics.io','pcmdi_metrics.pcmdi','pcmdi_metrics.graphics', 'pcmdi_metrics.ipsl'],  
        package_dir  = {'pcmdi_metrics': 'src/python',
                        'pcmdi_metrics.io': 'src/python/io',
-		       'pcmdi_metrics.ipsl': 'src/python/ipsl',
                        'pcmdi_metrics.pcmdi': 'src/python/pcmdi',
+		       'pcmdi_metrics.ipsl': 'src/python/ipsl',
                        'pcmdi_metrics.graphics': 'src/python/graphics',
                       },
        scripts      = ['src/python/pcmdi/scripts/pcmdi_metrics_driver.py'],
        data_files   = [('demo/ACME',demo_ACME_files),
-                       ('demo/CSIRO',demo_CSIRO_files),
                        ('demo/GFDL',demo_GFDL_files),
                        ('demo/NCAR',demo_NCAR_files),
                        ('doc/parameter_files',param_files),

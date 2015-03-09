@@ -1,5 +1,7 @@
 import io
 from ipsl_SE_metrics import compute_metrics
+from latBands_mean_climate_metrics_calculations import compute_metrics_latBands
+from oceanBasins_mean_climate_metrics_calculations import compute_metrics_oceanBasins
 
-import getJetLat 
+import jet_latitude 
 
